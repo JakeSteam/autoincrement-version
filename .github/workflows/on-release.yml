@@ -1,0 +1,25 @@
+name: On release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          ref: master
+
+      - name: Increment patch version
+        uses: yoichiro/gh-action-increment-value@v5
+        with:
+          target_directory: ''
+          target_file: 'dependencies.gradle'
+          prefix: 'versionPatch:'
+          suffix: ']'
+          commit_message: '[skip ci] Increments the patch version to'
