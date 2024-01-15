@@ -1,1 +1,1 @@
-ext.semver = [versionMajor:1, versionMinor:5, versionPatch:0]
+ext.semver = [versionMajor:1, versionMinor:5, versionPatch:1]
