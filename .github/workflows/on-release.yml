@@ -19,7 +19,7 @@ jobs:
         uses: yoichiro/gh-action-increment-value@v5
         with:
           target_directory: ''
-          target_file: 'dependencies.gradle'
+          target_file: 'versions.txt'
           prefix: 'versionPatch:'
           suffix: ']'
           commit_message: '[skip ci] Increments the patch version to'
