@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          ref: master
+          ref: main
 
       - name: Increment patch version
         uses: yoichiro/gh-action-increment-value@v5
